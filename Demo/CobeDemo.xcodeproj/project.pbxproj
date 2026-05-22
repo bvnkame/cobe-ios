@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		239F3B386B058E29AABE375A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7EF4F5E11709D516301DB /* ViewController.swift */; };
 		498E9D90B643CEB7F716592F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC82E49493D25EE7D962681 /* ViewController.swift */; };
 		4C8D6758713CF24EBBC26564 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07932468E2754C6E53C735DA /* SceneDelegate.swift */; };
+		844C1F5C3ECBB476746A8A27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B1A721AB13517CDAB2651 /* AppDelegate.swift */; };
+		8C56679F5515EBE39B5D442D /* Cobe in Frameworks */ = {isa = PBXBuildFile; productRef = EA2A2C8E4CEDF89EB5696F20 /* Cobe */; };
 		D037F1C808E1BA2F8DD8B330 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B7C636C63716C6F2DC4577 /* AppDelegate.swift */; };
 		F81A869635C7FC0041582612 /* Cobe in Frameworks */ = {isa = PBXBuildFile; productRef = ECF0511671B6A150B36ACB50 /* Cobe */; };
 /* End PBXBuildFile section */
@@ -16,9 +19,14 @@
 /* Begin PBXFileReference section */
 		07932468E2754C6E53C735DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		134253878D57830DF24932C5 /* cobe-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "cobe-ios"; path = ..; sourceTree = SOURCE_ROOT; };
+		54481159A5270D5BE5204758 /* MacDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacDemo.entitlements; sourceTree = "<group>"; };
 		79DFD8EFFB885CE0B8A76791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		80D299D4D159BB9E1EE09886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B3B7C636C63716C6F2DC4577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B64B1A721AB13517CDAB2651 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B7C7EF4F5E11709D516301DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BAC82E49493D25EE7D962681 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D10D8AA6FB84E46490EE3928 /* CobeDemoMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CobeDemoMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABB554AAA66FC067F5AF818 /* CobeDemo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CobeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -31,6 +39,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		91E04A33A255E556DD5CE251 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C56679F5515EBE39B5D442D /* Cobe in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -38,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				FABB554AAA66FC067F5AF818 /* CobeDemo.app */,
+				D10D8AA6FB84E46490EE3928 /* CobeDemoMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -46,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				5EAFEAA2E19A803A071AF21F /* Demo */,
+				F817449038142CB6F93381E4 /* MacDemo */,
 				8F40DC980F8ED7F8D487C3F2 /* Packages */,
 				031D966BFE8F7599ACC87940 /* Products */,
 			);
@@ -70,9 +88,39 @@
 			name = Packages;
 			sourceTree = "<group>";
 		};
+		F817449038142CB6F93381E4 /* MacDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B64B1A721AB13517CDAB2651 /* AppDelegate.swift */,
+				80D299D4D159BB9E1EE09886 /* Info.plist */,
+				54481159A5270D5BE5204758 /* MacDemo.entitlements */,
+				B7C7EF4F5E11709D516301DB /* ViewController.swift */,
+			);
+			path = MacDemo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		092B7FB5361F000A22D5A07E /* CobeDemoMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82217B35C440FC69A4D00A40 /* Build configuration list for PBXNativeTarget "CobeDemoMac" */;
+			buildPhases = (
+				9CD9F1C67FCD19246BC14736 /* Sources */,
+				91E04A33A255E556DD5CE251 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CobeDemoMac;
+			packageProductDependencies = (
+				EA2A2C8E4CEDF89EB5696F20 /* Cobe */,
+			);
+			productName = CobeDemoMac;
+			productReference = D10D8AA6FB84E46490EE3928 /* CobeDemoMac.app */;
+			productType = "com.apple.product-type.application";
+		};
 		DE5A574B2F55A209FBAD6B11 /* CobeDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81A961437B3F1FE236A98342 /* Build configuration list for PBXNativeTarget "CobeDemo" */;
@@ -100,6 +148,12 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					092B7FB5361F000A22D5A07E = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
 			};
 			buildConfigurationList = 3510918D4B806E9A09BC130B /* Build configuration list for PBXProject "CobeDemo" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -119,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				DE5A574B2F55A209FBAD6B11 /* CobeDemo */,
+				092B7FB5361F000A22D5A07E /* CobeDemoMac */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +186,15 @@
 				D037F1C808E1BA2F8DD8B330 /* AppDelegate.swift in Sources */,
 				4C8D6758713CF24EBBC26564 /* SceneDelegate.swift in Sources */,
 				498E9D90B643CEB7F716592F /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CD9F1C67FCD19246BC14736 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844C1F5C3ECBB476746A8A27 /* AppDelegate.swift in Sources */,
+				239F3B386B058E29AABE375A /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,13 +247,38 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		586F87ED122815785A7F8679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacDemo/MacDemo.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = MacDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cobe.demo.mac;
+				PRODUCT_NAME = CobeDemo;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.7;
 			};
 			name = Release;
 		};
@@ -262,14 +351,39 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D5EA400899970ED4207ACAA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacDemo/MacDemo.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = MacDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cobe.demo.mac;
+				PRODUCT_NAME = CobeDemo;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.7;
 			};
 			name = Debug;
 		};
@@ -311,6 +425,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
+		82217B35C440FC69A4D00A40 /* Build configuration list for PBXNativeTarget "CobeDemoMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5EA400899970ED4207ACAA9 /* Debug */,
+				586F87ED122815785A7F8679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
@@ -321,6 +444,10 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EA2A2C8E4CEDF89EB5696F20 /* Cobe */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Cobe;
+		};
 		ECF0511671B6A150B36ACB50 /* Cobe */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Cobe;

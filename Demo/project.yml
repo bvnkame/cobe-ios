@@ -3,6 +3,7 @@ options:
   bundleIdPrefix: com.cobe
   deploymentTarget:
     iOS: 14.0
+    macOS: 11.0
 packages:
   Cobe:
     path: ..
@@ -30,3 +31,27 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.cobe.demo
         SWIFT_VERSION: 5.7
         TARGETED_DEVICE_FAMILY: 1,2
+
+  CobeDemoMac:
+    type: application
+    platform: macOS
+    sources: [MacDemo]
+    info:
+      path: MacDemo/Info.plist
+      properties:
+        NSHighResolutionCapable: true
+    dependencies:
+      - package: Cobe
+    settings:
+      base:
+        PRODUCT_NAME: CobeDemo
+        PRODUCT_BUNDLE_IDENTIFIER: com.cobe.demo.mac
+        SWIFT_VERSION: 5.7
+        MACOSX_DEPLOYMENT_TARGET: 11.0
+        MARKETING_VERSION: 1.0.0
+        CURRENT_PROJECT_VERSION: 1
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGN_IDENTITY: "-"
+        CODE_SIGN_ENTITLEMENTS: MacDemo/MacDemo.entitlements
+        ENABLE_HARDENED_RUNTIME: NO
+        DEVELOPMENT_TEAM: ""

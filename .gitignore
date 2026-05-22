@@ -23,3 +23,7 @@ Package.resolved
 # Carthage / CocoaPods (just in case)
 Carthage/Build/
 Pods/
+
+# Release artifacts
+dist/
+*.dmg
