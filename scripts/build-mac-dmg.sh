@@ -24,6 +24,13 @@ echo ">> regenerating xcodeproj"
 cd "$DEMO_DIR"
 xcodegen generate
 
+# xcodegen emits objectVersion matching the host Xcode (e.g. 77 on Xcode 26).
+# Force a lower format so older Xcode versions (e.g. on CI runners) can read it.
+PBXPROJ="$DEMO_DIR/CobeDemo.xcodeproj/project.pbxproj"
+if [ -f "$PBXPROJ" ]; then
+  /usr/bin/sed -i '' -E 's/^([[:space:]]*objectVersion = )[0-9]+;/\156;/' "$PBXPROJ"
+fi
+
 echo ">> building $APP_NAME (universal, Release)"
 xcodebuild \
   -project "$DEMO_DIR/CobeDemo.xcodeproj" \

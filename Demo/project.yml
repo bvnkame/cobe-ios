@@ -1,6 +1,7 @@
 name: CobeDemo
 options:
   bundleIdPrefix: com.cobe
+  xcodeVersion: "15.0"
   deploymentTarget:
     iOS: 14.0
     macOS: 11.0

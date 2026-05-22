@@ -16,18 +16,22 @@ permissions:
 
 jobs:
   build-dmg:
-    runs-on: macos-14
+    runs-on: macos-15
     timeout-minutes: 30
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Select Xcode
+      - name: Select latest Xcode
         run: |
-          ls /Applications | grep -i xcode || true
-          sudo xcode-select -s "/Applications/Xcode_15.4.app/Contents/Developer" || \
-          sudo xcode-select -s "/Applications/Xcode.app/Contents/Developer"
+          ls /Applications | grep -i '^Xcode' || true
+          LATEST=$(ls -d /Applications/Xcode_*.app 2>/dev/null | sort -V | tail -1)
+          if [ -n "$LATEST" ]; then
+            sudo xcode-select -s "$LATEST/Contents/Developer"
+          else
+            sudo xcode-select -s "/Applications/Xcode.app/Contents/Developer"
+          fi
           xcodebuild -version
 
       - name: Install xcodegen
