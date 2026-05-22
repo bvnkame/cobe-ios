@@ -1,0 +1,32 @@
+name: CobeDemo
+options:
+  bundleIdPrefix: com.cobe
+  deploymentTarget:
+    iOS: 14.0
+packages:
+  Cobe:
+    path: ..
+targets:
+  CobeDemo:
+    type: application
+    platform: iOS
+    sources: [Demo]
+    info:
+      path: Demo/Info.plist
+      properties:
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+          UISceneConfigurations:
+            UIWindowSceneSessionRoleApplication:
+              - UISceneConfigurationName: Default Configuration
+                UISceneDelegateClassName: $(PRODUCT_MODULE_NAME).SceneDelegate
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+    dependencies:
+      - package: Cobe
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.cobe.demo
+        SWIFT_VERSION: 5.7
+        TARGETED_DEVICE_FAMILY: 1,2
